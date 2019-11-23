@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://rramaa.netlify.com/* https://rramaa.com/:splat 302!
