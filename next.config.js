@@ -7,7 +7,6 @@ module.exports = (phase, { defaultConfig }) => {
     const images = require("remark-images");
     const emoji = require("remark-emoji");
     const withOptimizedImages = require("next-optimized-images");
-    const withSourceMaps = require("@zeit/next-source-maps");
     const withMDX = require("@zeit/next-mdx")({
         // parse mdx files
         extension: /\.mdx?$/,
@@ -16,37 +15,35 @@ module.exports = (phase, { defaultConfig }) => {
         }
     });
 
-    return withSourceMaps(
-        withFonts(
-            withOptimizedImages(
-                withMDX({
-                    pageExtensions: ["js", "jsx", "md", "mdx"],
-                    exportPathMap: async function(
-                        defaultPathMap,
-                        { dev, dir, outDir, distDir, buildId }
-                    ) {
-                        if (dev) {
-                            return defaultPathMap;
-                        }
-                        await copyFile(
-                            path.join(dir, "my-worker.js"),
-                            path.join(outDir, "my-worker.js")
-                        );
+    return withFonts(
+        withOptimizedImages(
+            withMDX({
+                pageExtensions: ["js", "jsx", "md", "mdx"],
+                exportPathMap: async function(
+                    defaultPathMap,
+                    { dev, dir, outDir, distDir, buildId }
+                ) {
+                    if (dev) {
                         return defaultPathMap;
-                    },
-                    webpack: function(config, { dev }) {
-                        config.node = {
-                            fs: "empty"
-                        };
-                        // parse yaml so we can use config.yml
-                        config.module.rules.push({
-                            test: /\.ya?ml$/,
-                            use: "js-yaml-loader"
-                        });
-                        return config;
                     }
-                })
-            )
+                    await copyFile(
+                        path.join(dir, "my-worker.js"),
+                        path.join(outDir, "my-worker.js")
+                    );
+                    return defaultPathMap;
+                },
+                webpack: function(config, { dev }) {
+                    config.node = {
+                        fs: "empty"
+                    };
+                    // parse yaml so we can use config.yml
+                    config.module.rules.push({
+                        test: /\.ya?ml$/,
+                        use: "js-yaml-loader"
+                    });
+                    return config;
+                }
+            })
         )
     );
 };
