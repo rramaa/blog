@@ -13,7 +13,7 @@ export const meta = {
 function Home() {
   return (
     <div>
-     "Test"
+     <HomePageLayout />
     </div>
   );
 }

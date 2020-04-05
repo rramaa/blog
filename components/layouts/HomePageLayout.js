@@ -1,8 +1,8 @@
 import React from "react";
 import NavButton from "../NavButton";
-import HomeScreenAsset from "../../static/images/home_screen_asset.png";
-import blogButtonPng from "../../static/images/blog_button.png";
-import aboutButtonPng from "../../static/images/about_button.png";
+import HomeScreenAsset from "../../public/static/images/home_screen_asset.png";
+import blogButtonPng from "../../public/static/images/blog_button.png";
+import aboutButtonPng from "../../public/static/images/about_button.png";
 
 export default function HomePageLayout() {
   return (

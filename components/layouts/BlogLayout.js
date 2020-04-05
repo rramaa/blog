@@ -1,6 +1,6 @@
 import React from "react";
 import NavButton from "../NavButton";
-import blogButtonPng from "../../static/images/blog_button.png";
+import blogButtonPng from "../../public/static/images/blog_button.png";
 import DiscussionLink from "../DiscussionLink";
 import ReferenceSection from "../ReferencesSection";
 import QuickNotes from "../QuickNotes";
