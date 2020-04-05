@@ -42,7 +42,7 @@ export default class MyApp extends App {
             {},
             { router, postData, allData, ...pageProps }
         );
-
+        delete propsObj.router
         return { ...propsObj };
     }
 
