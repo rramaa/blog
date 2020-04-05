@@ -1,8 +1,21 @@
-import Link from "next/link";
+import React from "react";
+import HomePageLayout from "../components/layouts/HomePageLayout";
 
-export default function Index(){
-    return <>
-        <div>As</div>
-        <Link href={"/about"}><a>About</a></Link>
-    </>
+export const meta = {
+  title: "Home - Disco's diary",
+  tags: ["Next.js", "MDX"],
+  layout: "page",
+  publishDate: "2011-01-01",
+  modifiedDate: false,
+  seoDescription: "This is an about page."
+};
+
+function Home() {
+  return (
+    <div>
+     "Test"
+    </div>
+  );
 }
+
+export default Home;

@@ -1,0 +1,32 @@
+config:
+    author: Ramakrishna
+    siteName: Ramakrishna's Space
+    siteDescription: Ramakrishna
+    defaultPageTitle: Ramakrishna
+    blogTitle: Ramakrishna's blog
+    baseUrl: https://rramaa.com
+
+    # For Twitter cards, this logo must be a hosted url, not a relative path.
+    # Must be square. Minimum size is 144x144; maximum size 4096x4096.
+    websiteLogo: "https://cdn.auth0.com/blog/logos/nextjs-logo.png"
+
+    # if your string begins with a special character, you usually have to put it in quotes
+    twitterHandle: "@ramakrishna__"
+    twitterCardType: summary
+
+    # This is list is used to create the links in the navigation panel
+    navigation:
+        - { text: Home, link: / }
+        - { text: Blog, link: /blog }
+        - { text: About, link: /about }
+
+    css:
+        primaryColor: "#efb596"
+        primaryLightColor: "#fad7c5"
+        primaryLightestColor: "#fdebe2"
+        accentColor: "#455A64"
+        lightGray: "#eeeeee"
+        backgroundColor: "#ffffff"
+        black: "#333"
+
+    gaTrackingId: "UA-144848380-1"
