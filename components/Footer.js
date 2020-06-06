@@ -1,5 +1,5 @@
 import React from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config.json";
 
 export default function Footer() {
     return (

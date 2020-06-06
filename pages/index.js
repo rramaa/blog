@@ -2,7 +2,7 @@ import React from "react";
 import HomePageLayout from "../components/layouts/HomePageLayout";
 
 export const meta = {
-  title: "Home - Disco's diary",
+  title: "Home | Rama's Space",
   tags: ["Next.js", "MDX"],
   layout: "page",
   publishDate: "2011-01-01",
@@ -10,10 +10,10 @@ export const meta = {
   seoDescription: "This is an about page."
 };
 
-function Home() {
+function Home({ router }) {
   return (
     <div>
-     <HomePageLayout />
+     <HomePageLayout homePath={router.pathname} />
     </div>
   );
 }

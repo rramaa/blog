@@ -1,27 +1,28 @@
 import React from "react";
 import NavButton from "../NavButton";
-import HomeScreenAsset from "../../public/static/images/home_screen_asset.png";
-import blogButtonPng from "../../public/static/images/blog_button.png";
-import aboutButtonPng from "../../public/static/images/about_button.png";
+import { config } from "../../config/config.json";
 
-export default function HomePageLayout() {
+export default function HomePageLayout({ homePath }) {
+  let homeLinkConfig = config.navigation.find(v => v.link === homePath)
+  let otherLinks = config.navigation.filter(v => v.link !== homePath)
   return (
     <div className="homeScreenLayout">
       <div className="homeScreenAssetContainer">
+        <h1>My personal thoughts</h1>
         <img
+            alt={"Ramakrishna's image"}
           className="homeScreenAssetContainer__image"
-          src={HomeScreenAsset}
+          src={homeLinkConfig.imageSrc}
         />
       </div>
       <div className="navigationButtonContainer">
-        <NavButton
-          src={blogButtonPng}
-          link="/blog"
-        />
-        <NavButton
-          src={aboutButtonPng}
-          link="/about"
-        />
+        {otherLinks.map(v => (
+            <NavButton
+                key={v.link}
+                src={v.imageSrc}
+                link={v.link}
+            />
+        ))}
       </div>
       <style jsx>{`
         .home-page-layout {
@@ -31,7 +32,6 @@ export default function HomePageLayout() {
             align-items: center;
         }
         .navigationButtonContainer {
-            padding-top: 50px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -39,6 +39,7 @@ export default function HomePageLayout() {
         }
         .homeScreenAssetContainer {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;

@@ -1,0 +1,40 @@
+{
+  "config": {
+    "author": "Ramakrishna",
+    "siteName": "Ramakrishna's Space",
+    "siteDescription": "Ramakrishna",
+    "defaultPageTitle": "Ramakrishna",
+    "blogTitle": "Ramakrishna's blog",
+    "baseUrl": "https://rramaa.com",
+    "websiteLogo": "https://cdn.auth0.com/blog/logos/nextjs-logo.png",
+    "twitterHandle": "@ramakrishna__",
+    "twitterCardType": "summary",
+    "navigation": [
+      {
+        "text": "Home",
+        "link": "/",
+        "imageSrc": "/static/images/home_screen_asset.jpg"
+      },
+      {
+        "text": "Blog",
+        "link": "/blog",
+        "imageSrc": "/static/images/blog_button.png"
+      },
+      {
+        "text": "About",
+        "link": "/about",
+        "imageSrc": "/static/images/about_button.png"
+      }
+    ],
+    "css": {
+      "primaryColor": "#efb596",
+      "primaryLightColor": "#fad7c5",
+      "primaryLightestColor": "#fdebe2",
+      "accentColor": "#455A64",
+      "lightGray": "#eeeeee",
+      "backgroundColor": "#ffffff",
+      "black": "#333"
+    },
+    "gaTrackingId": "UA-144848380-1"
+  }
+}

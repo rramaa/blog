@@ -1,7 +1,7 @@
 {
     "name": "Disco's diary",
     "short_name": "Diary",
-    "description": "The personal public diary of discoman.",
+    "description": "Ramblings by Ramakrishna",
     "display": "standalone",
     "orientation": "portrait",
     "start_url": "/",
