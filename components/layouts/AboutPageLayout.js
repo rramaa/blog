@@ -1,10 +1,12 @@
 import React from "react";
 import NavButton from "../NavButton";
 import { config } from "../../config/config.json";
+import aboutImage from "../../public/static/images/home_screen_asset.jpg"
+import mainImage from "../../public/static/images/blog_button.png"
 
 export default function AboutPageLayout() {
   let homeLinkConfig = config.navigation.find(v => v.key === "Home")
-  let otherLinks = config.navigation.filter(v => v.key === "Blog")
+  let blogLink = config.navigation.find(v => v.key === "Blog")
   return (
     <div className="home-page-layout">
       <div className="homeScreenAssetContainer">
@@ -12,17 +14,15 @@ export default function AboutPageLayout() {
         <img
             alt={"Ramakrishna's image"}
           className="homeScreenAssetContainer__image"
-          src={homeLinkConfig.imageSrc}
+          src={aboutImage}
         />
       </div>
       <div className="navigationButtonContainer">
-        {otherLinks.map(v => (
-            <NavButton
-                key={v.link}
-                src={v.imageSrc}
-                link={v.link}
-            />
-        ))}
+        <NavButton
+            key={blogLink.link}
+            src={mainImage}
+            link={blogLink.link}
+        />
       </div>
       <style jsx>{`
         .home-page-layout {

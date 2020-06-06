@@ -1,12 +1,13 @@
 import cs from 'classnames'
 import Link from "next/link";
 import { config } from "../config/config";
+import thumbnail from '../public/static/images/thumbnail.png'
 
 const aboutLink = config.navigation.find(v => v.key === "About").link
 
 export default function UserSnippet({ className }) {
     return <div className={cs(className, "user-thumbnail")}>
-        <img alt={"User Thumbnail"} src={"/static/images/thumbnail.png"} />
+        <img alt={"User Thumbnail"} src={thumbnail} />
         <h1>My Space by <Link href={aboutLink} ><a>Ramakrishna</a></Link></h1>
         <style jsx>{`
             .user-thumbnail {
