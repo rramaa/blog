@@ -26,10 +26,10 @@ module.exports = (phase, { defaultConfig }) => {
                     if (dev) {
                         return defaultPathMap;
                     }
-                    await copyFile(
-                        path.join(dir, "my-worker.js"),
-                        path.join(outDir, "my-worker.js")
-                    );
+                    // await copyFile(
+                    //     path.join(dir, "my-worker.js"),
+                    //     path.join(outDir, "my-worker.js")
+                    // );
                     return defaultPathMap;
                 },
                 webpack: function(config, { dev }) {
