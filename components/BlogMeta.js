@@ -31,6 +31,7 @@ export default class BlogMeta extends Component {
         {showWarning && <Warning message={warningMessage}/>}
         <style jsx>{`
             .imageContainer {
+                width: 60vw;
                 padding: 40px 0px 20px 0px;
             }
         `}</style>

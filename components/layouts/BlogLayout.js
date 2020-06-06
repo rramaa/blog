@@ -11,7 +11,7 @@ export default ({ children }) => {
   const { fullUrlPath, references } = postData;
   // by default show discussion link
   const showDiscussionLink =
-    postData.showDiscussionLink === false ? false : true;
+    postData.showDiscussionLink !== false;
   return (
     <div className="blog-layout">
       <QuickNotes />
@@ -22,12 +22,15 @@ export default ({ children }) => {
         <NavButton
           className="navigationButtonContainer__button"
           src={blogButtonPng}
-          link="/blog"
+          link="/"
         />
       </div>
       <style jsx>{`
         .blog-layout {
-          margin: auto;
+          margin: 0 auto; 
+          display: flex;
+          align-items: center;
+          flex-direction: column;
         }
 
         .navigationButtonContainer {

@@ -6,10 +6,8 @@ import css from "styled-jsx/css";
 import { config } from "../config/config";
 
 // used in pages/about.js, pages/index.js
-export const centeredPageStyles = css`
+export const centeredPageStyles = css.global`
     .centered-container {
-        height: 80vh;
-        width: 98vw;
         margin: auto;
         display: flex;
         align-items: center;

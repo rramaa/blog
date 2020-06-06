@@ -23,7 +23,10 @@ export default function FlipImg(props) {
         }
 
         .image {
+          width: 100%;
+          height: 100%;
           backface-visibility: hidden;
+          object-fit: cover;
         }
 
         /* THE CARD HOLDS THE FRONT AND BACK FACES */

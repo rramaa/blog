@@ -30,8 +30,9 @@ export default class MyApp extends App {
             pageProps = await Component.getInitialProps(ctx);
         }
 
-        const [allData, postData] = await Promise.all([
-            BlogEngine(),
+        const [allData, pageData, postData] = await Promise.all([
+            BlogEngine("posts"),
+            BlogEngine("pages"),
             getPostData(router)
         ]).catch(error => {
             console.error("Error in _app.js getInitialProps()", error);
@@ -64,7 +65,7 @@ export default class MyApp extends App {
         if (postData) {
             const tagsString = postData.tags.join(", ");
             return (
-                <Container>
+                <>
                     {/* (1) SEO  */}
                     <Head>
                         <meta name="keywords" content={tagsString} />
@@ -85,7 +86,7 @@ export default class MyApp extends App {
                             margin: 15px;
                         }
                     `}</style>
-                </Container>
+                </>
             );
         } else {
             return null;

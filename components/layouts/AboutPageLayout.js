@@ -2,11 +2,11 @@ import React from "react";
 import NavButton from "../NavButton";
 import { config } from "../../config/config.json";
 
-export default function HomePageLayout({ homePath }) {
-  let homeLinkConfig = config.navigation.find(v => v.link === homePath)
-  let otherLinks = config.navigation.filter(v => v.link !== homePath)
+export default function AboutPageLayout() {
+  let homeLinkConfig = config.navigation.find(v => v.key === "Home")
+  let otherLinks = config.navigation.filter(v => v.key === "Blog")
   return (
-    <div className="homeScreenLayout">
+    <div className="home-page-layout">
       <div className="homeScreenAssetContainer">
         <h1>My Space</h1>
         <img
