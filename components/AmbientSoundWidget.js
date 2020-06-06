@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 const AMBIENT_SOUND_URL = "https://raw.githubusercontent.com/PaliwalSparsh/next-blog/feature/branch-for-static-content-hosting/static/audio/rainforest.mp3";
 

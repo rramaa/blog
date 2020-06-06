@@ -1,5 +1,5 @@
 import { formatSEODate, getSecondsSinceEpoch } from "./formatters";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 const postFileNames = () => {
     const postFileNames =

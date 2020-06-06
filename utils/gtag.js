@@ -1,4 +1,4 @@
-import config from "../config/config.yml";
+import config from "../config/config";
 
 export const GA_TRACKING_ID = config.gaTrackingId;
 

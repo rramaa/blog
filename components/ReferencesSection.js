@@ -1,11 +1,11 @@
 import React from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 export default function Footer(props) {
   const { references } = props;
   return (
     <div className="referenceSection">
-    
+
       <div className="referenceSection__heading">References</div>
       <div className="referenceSection__list">
         {references.map((reference, index) => {

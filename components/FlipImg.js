@@ -1,5 +1,5 @@
 import React from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 export default function FlipImg(props) {
   const isImageFlippable = props.message !== undefined;

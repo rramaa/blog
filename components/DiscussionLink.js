@@ -1,5 +1,5 @@
 import React from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 import * as gtag from "../utils/gtag";
 
 const BLOG_BASE_URL = "rramaa.com";

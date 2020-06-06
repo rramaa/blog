@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ScrollProgress from "scrollprogress";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 export default class ReadingProgress extends Component {
     state = {

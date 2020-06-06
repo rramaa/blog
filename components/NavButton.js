@@ -5,7 +5,9 @@ export default function NavButton(props) {
   return (
     <>
       <Link href={props.link}>
-        <img className="navButton" src={props.src} />
+          <a>
+              <img className="navButton" src={props.src} />
+          </a>
       </Link>
       <style jsx>{`
         .navButton {

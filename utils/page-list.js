@@ -1,5 +1,5 @@
 import { formatSEODate, getSecondsSinceEpoch } from "./formatters";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 // _app.js and _document.js are next.js specific files, and should be ignored
 // the blog directory is ignored here, but is processed in post-list.js

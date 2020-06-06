@@ -1,6 +1,6 @@
 import React from "react";
 import { ArticleJsonLd } from "next-seo";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 export function articleSEO(postData) {
     if (!postData) return;

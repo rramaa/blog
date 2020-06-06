@@ -8,7 +8,7 @@ export default function HomePageLayout({ homePath }) {
   return (
     <div className="homeScreenLayout">
       <div className="homeScreenAssetContainer">
-        <h1>My personal thoughts</h1>
+        <h1>My Space</h1>
         <img
             alt={"Ramakrishna's image"}
           className="homeScreenAssetContainer__image"

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import { FaTimes } from "react-icons/fa";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 
 export const NavigationItem = props => (
     <li>

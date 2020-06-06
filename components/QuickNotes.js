@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { config } from "../config/config.yml";
+import { config } from "../config/config";
 import * as gtag from "../utils/gtag";
 
 const gaForQuickNotesButton = () => {
