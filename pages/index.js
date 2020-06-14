@@ -17,12 +17,15 @@ export default function Blog(props) {
       <div className="blog-post-list">
         <UserSnippet />
         <PostListings posts={blogPosts} />
+
         <style jsx>{`
-          .blog-post-list {
-            width: 40vw;
-            margin: 0 auto;
-          }
-        `}
+            @media screen and (min-width: 769px) {
+              .blog-post-list {
+                width: 40vw;
+                margin: 0 auto;
+              }   
+            }
+            `}
         </style>
       </div>
   );
