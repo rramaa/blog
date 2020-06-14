@@ -32,13 +32,33 @@ function Heading({headings, selected, updateSelected}) {
     )
 }
 
+function Body({tabContents, renderer, selected}) {
+    return (
+        <div className={"tab-content"}>
+            {tabContents.map(({content, heading}) => (
+                <div key={heading} className={selected === heading ? "selected" : "hidden"}>
+                    {renderer(content)}
+                </div>
+            ))}
+            <style jsx>{`
+                .hidden {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+            `}</style>
+        </div>
+    )
+}
+
 export default function Tabs({ tabs, renderer }) {
     let tabHeadings = Object.keys(tabs);
+    let tabContent = Object.keys(tabs).map(tab => ({content: tabs[tab], heading: tab}))
     let [selected, updateSelected] = React.useState(tabHeadings[0])
     return (
         <>
             <Heading headings={tabHeadings} selected={selected} updateSelected={updateSelected} />
-            {renderer(tabs[selected])}
+            <Body tabContents={tabContent} renderer={renderer} selected={selected} />
         </>
     )
 }
