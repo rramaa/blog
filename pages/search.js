@@ -1,6 +1,6 @@
 import React from "react";
 import SearchLayout from "../components/layouts/SearchLayout";
-import PostListing from "../components/PostListing";
+import PostListings from "../components/PostListings";
 
 export const meta = {
     title: "Search",
@@ -17,12 +17,9 @@ export default function Search(props) {
 
         const items = posts
             .filter(post => post.tags.includes(tagTopic))
-            .map((post, index) => (
-                <PostListing key={index} post={post} index={index} />
-            ));
 
         if (items.length) {
-            return items;
+            return <PostListings posts={items} />;
         } else {
             return <h2 key="not-found-headline">No results</h2>;
         }
