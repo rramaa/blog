@@ -8,9 +8,14 @@ date: 2024-03-25
 
 import {ProfilePicture} from '../components/ProfilePicture'
 
-<ProfilePicture
-    src='/images/profile_picture.jpg'
-/>
+<div style={{display: 'flex', justifyContent: 'center'}}><ProfilePicture
+    imageProps={{
+        src: '/images/profile_picture.jpg',
+        size: "100px",
+        positionY: '-25px'
+    }}
+    name={"Ramakrishna"}
+/></div>
 
 I am a Software developer living in Germany. I like to read books, swim and grow plants. Currently, experimenting with blogging
 
