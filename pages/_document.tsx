@@ -3,8 +3,8 @@ import {Footer} from "../components/Footer";
 
 export default function Document() {
   const meta = {
-    title: "Next.js Blog Starter Kit",
-    description: "Clone and deploy your own Next.js portfolio in minutes.",
+    title: "Rama's Blog",
+    description: "A notepad for (some of) my thoughts",
     image: "https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png",
   };
 
